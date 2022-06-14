@@ -17,7 +17,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url(./design/mobile-design.jpg);
+  /* background-image: url(./design/mobile-design.jpg); */
   /* background-image: url(./design/desktop-design.jpg); */
   background-repeat: no-repeat;
   background-position: center;
@@ -48,10 +48,10 @@ body {
 }
 
 .card {
-  opacity: 0.5;
+  /* opacity: 0.5; */
   max-width: 327px;
   /* height: 570px; */
-  background-color: var(--card-background);
+  background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   margin: 24px;
@@ -154,6 +154,7 @@ body {
   background-color: var(--bright-blue);
   color: var(--very-pale-blue);
   border-radius: 15px;
+  box-shadow: 0 15px 15px var(--bright-blue);
 }
 
 .card .container button.cancel {
@@ -165,31 +166,51 @@ body {
 
 @media (min-width: 480px) {
   .card {
-    max-width: 352px;
-    /* min-height: 600px; */
+    max-width: 452px;
+    /* height: 700px; */
   }
-  .card h2 {
-    margin-top: 23px;
+  .card .container {
+    padding: 44px 49px;
+    padding-bottom: 31px;
   }
-  .card p {
+  .card .container h2{
+    margin-top: 0px;
+    font-size: 28px;
+  } 
+  .card .container p{
+    font-size: 16px;
+    line-height: 1.5rem;
     margin-top: 18px;
-    font-size: 18px;
-    line-height: 1.6rem;
   }
-  .card .priceDate {
-    margin-top: 22px;
-  }
-  .card .priceDate .price, .card .priceDate .date {
-    font-size: 17px;
-  }
-  .card .line {
+  .card .container .plan {
     margin-top: 24px;
+    padding: 24px;
+    height: 96px;
+    border-radius: 10px;
+    /* justify-content: space-between; */
   }
-  .card .author p {
+  .card .container .plan .price {
+    padding: 0px 0px 0 20px ;
+    margin-right: 100px;
+  }
+  .card .container .plan .price p{
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  .card .container .plan .price p:nth-child(1){
+    font-weight: 700;
+  }
+  .card .container .plan .price p:nth-child(2){
     font-size: 16px;
   }
-  .card .author p a {
-    letter-spacing: 0.2px;
+  .card .container .plan a {
+    width: auto;
+  }
+  .card .container button.pay {
+    margin-top: 32px;
+  }
+  .card .container button.cancel {
+    margin-top: 15px;
   }
 }
 
